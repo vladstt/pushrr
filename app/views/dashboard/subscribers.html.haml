@@ -1,0 +1,81 @@
+%h1
+  Subscribers
+  %sup
+    (84)
+/* Starting the Notifications section */
+
+%div.row
+  %div.col-md-8
+    %div.top-table-area.is-single-push-it-up
+      %div.pull-right.table-search-input
+        %div.input-group.custom-input-group
+          %input.form-control{"type" => "text", "placeholder" => "Search for a subscriber"}
+          %span.input-group-btn
+            %button.btn.btn-default{"type" => "button"}
+              %span.fa.fa-search
+
+
+
+
+    %div#no-more-tables.pushrr-table
+      %table.col-md-12.table-striped
+        %thead
+          %tr
+            %th{"width" => "1%"}
+              %input{"type" => "checkbox"}
+            %th
+              Date subscribed
+              %span.fa.fa-caret-down
+            %th
+              Country
+              %span.fa.fa-caret-down
+            %th
+              Group
+              %span.fa.fa-caret-down
+            %th
+              &nbsp;
+        %tbody
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              Germany
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+
+    %ul.pagination.custom-input-group
+      %li
+        %a{"href" => "#", "aria-label" => "Previous", "class" => "previous"}
+          %span.fa.fa-caret-left{"aria-hidden" => "true"}
+      %li
+        %a{"href" => "#", "title" => "Page 1"}
+          1
+      %li
+        %a{"href" => "#", "title" => "Page 2"}
+          2
+      %li
+        %a{"href" => "#", "title" => "Page 3"}
+          3
+      %li
+        %a{"href" => "#", "title" => "Page 4"}
+          4
+      %li
+        %a{"href" => "#", "title" => "Page 5"}
+          5
+      %li.disabled
+        %span
+          &bull;&bull;&bull;
+      %li
+        %a{"href" => "#", "title" => "Page 88"}
+          88
+      %li
+        %a{"href" => "#", "aria-label" => "Next", "class" => "next"}
+          %span.fa.fa-caret-right{"aria-hidden" => "true"}
+
+  %div.col-md-4
+    right-col

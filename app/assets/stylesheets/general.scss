@@ -1,0 +1,337 @@
+@import "constants";
+
+body {
+  font-family: 'Lato', sans-serif !important;
+  font-size: $push-text;
+  margin: 0;
+  padding: 0;
+  background: #F5F7F9;
+ }
+
+.pushrr-header {
+  background: $push-blue;
+  box-shadow: $push-shadow;
+  color: white;
+  line-height: 1;
+  padding: 13px 15px 14px;
+  a {
+    color: white;
+    .support {
+      font-size: 18px;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* This is what's going on in the sidebar */
+.push-sidebar {
+  background: $push-dark-blue;
+  background-image: image-url("dat-blur.png");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  width: 200px;
+  position: relative;
+  z-index: 900;
+
+  a {
+    &:hover {
+      color: white
+    }
+  }
+
+  .sidebar-more {
+    padding: 10px 20px;
+    a {
+      color: white;
+      line-height: 26px;
+      &:hover {
+        text-decoration: none;
+        .plus {
+          background: $push-blue;
+        }
+      }
+    }
+    .plus {
+      background: #122336;
+      text-align: center;
+      width: 27px;
+      height: 27px;
+      color: white;
+      box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.17);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      line-height: 27px;
+      font-size: 15px;
+      margin-right: 10px;
+    }
+  }
+
+  /* Website block */
+  .website-area {
+    border-left: 5px solid #152537;
+    padding: 18px 10px 18px 6px;
+    color: white;
+
+    .website-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      vertical-align: middle;
+      display: block;
+      border-radius: 50%;
+      background: #000;
+    }
+    .website-actions {
+      font-size: $push-small;
+      color: white;
+      font-weight: 300;
+      span {
+        margin-right: 5px;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+/* User block */
+.user-area {
+  padding: 30px 0;
+}
+.user-name {
+  font-weight: 700;
+  color: white;
+  padding-top: 10px;
+}
+.user-links {
+  font-size: $push-small;
+  color: white;
+  a {
+    margin: 0 5px;
+    font-size: $push-small;
+    color: white;
+    font-weight: 300;
+  }
+}
+
+.push-content {
+  margin-left: 200px;
+  float: none;
+  padding: 15px 55px;
+}
+.sidebar-menu {
+  padding: 15px 0;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 210px;
+  }
+  li {
+    &.on-page a {
+      @extend .sidebar-link-action;
+    }
+  }
+  a {
+    color: white;
+    display: block;
+    padding: 13px 0 13px 20px;
+    font-size: $push-text;
+    text-decoration: none;
+    line-height: 1;
+    &:hover, &.on-page {
+      @extend .sidebar-link-action
+    }
+  }
+  .push-icon {
+    font-size: 26px;
+    color: white;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
+/* Let's customize the dropdowns */
+.pushrr-dropdown {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* The table */
+.pushrr-table {
+  box-shadow: $push-shadow;
+  background: white;
+  border-radius: $standard;
+  overflow: hidden;
+  td, th {
+    padding: 13px;
+  }
+  th {
+    background: #323232;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    .fa {
+      margin-left: 5px;
+      font-size: 16px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+  // Here we define the text color based on the column importance
+  .importance_1 {
+    color: #999
+  }
+  .importance_3 {
+    font-size: 24px;
+  }
+}
+
+/* 100% heights */
+html, body, #pushrr-wrapper, .push-sidebar {
+  height: 100%;
+}
+
+/* Headers */
+h1 {
+  font-weight: 700;
+  font-size: 42px;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+h3 {
+  padding: 0;
+  margin: -5px 0 0;
+  font-size: $push-subtext;
+  color: $grey;
+  font-weight: 300;
+}
+
+/* The responsive table */
+@media only screen and (max-width: 800px) {
+
+  /* Force table to not be like tables anymore */
+  #no-more-tables table,
+  #no-more-tables thead,
+  #no-more-tables tbody,
+  #no-more-tables th,
+  #no-more-tables td,
+  #no-more-tables tr {
+    display: block;
+  }
+
+  /* Hide table headers (but not display: none;, for accessibility) */
+  #no-more-tables thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  #no-more-tables tr { border: 1px solid #ccc; }
+
+  #no-more-tables td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align:left;
+  }
+
+  #no-more-tables td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+
+  /*
+  Label the data
+  */
+  #no-more-tables td:before { content: attr(data-title); }
+}
+
+.wider-click-area {
+  border: 6px solid transparent;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Let's now customize the nav pills */
+.pushrr-pills {
+  display: block;
+  overflow: hidden;
+    &:after {
+      clear: none;
+    }
+    > li {
+      > a {
+      border-radius: 50px;
+      font-size: 18px;
+      min-width: 90px;
+      text-align: center;
+      padding: 5px 30px;
+      color: #333;
+      font-weight: 400;
+      background: white;
+      margin-right: 10px;
+    }
+
+    &.active {
+      a {
+        color: white;
+      }
+    }
+  }
+}
+.table-search-input {
+  width: 250px;
+}
+
+/* Styling the pagination */
+.pagination {
+  a {
+    color: #333;
+  }
+}
+.pagination {
+  > li {
+    > a {
+      color: #333;
+      padding: 8px 12px;
+      > span {
+        color: #999;
+      }
+    }
+
+  }
+}
+
+.top-table-area {
+  margin-bottom: 27px;
+  overflow: hidden;
+  padding-bottom: 3px;
+  margin-top: 30px;
+  &.is-single-push-it-up {
+    margin-top: -40px;
+  }
+}

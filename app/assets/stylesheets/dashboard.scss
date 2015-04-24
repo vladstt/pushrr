@@ -1,0 +1,51 @@
+@import "constants";
+
+/* Intro */
+.pushrr-intro {
+  background: image-url('mountain-background') 50% no-repeat;
+  background-size: cover;
+  height: 550px;
+  margin: -15px -55px 30px;
+  color: white;
+  position: relative;
+  .logo {
+    padding-top: 30px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .subtitle {
+    font-size: $push-subtext;
+    font-weight: 300;
+  }
+  .player-frame {
+    background: #000000;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+    border-radius: 10px;
+    width: 580px;
+    height: 335px;
+    margin: 30px auto 0;
+    padding: 10px;
+  }
+}
+
+.stats-summary {
+  .push-icon {
+    font-size: 72px;
+    margin-right: 20px;
+    color: #bbb
+  }
+  .counter {
+    font-size: 48px;
+    font-weight: 900;
+    display: block;
+    line-height: 1;
+    padding-top: 8px;
+  }
+  .counter-label {
+    font-size: $push-subtext;
+    color: $grey;
+    font-weight: 300;
+  }
+}

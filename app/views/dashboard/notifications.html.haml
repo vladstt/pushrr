@@ -1,0 +1,157 @@
+%h1
+  Notifications
+/* Starting the Notifications section */
+
+/* Le tabs */
+%div.top-table-area
+  %div.pull-right.table-search-input
+    %div.input-group.custom-input-group
+      %input.form-control{"type" => "text", "placeholder" => "Search for a notification"}
+      %span.input-group-btn
+        %button.btn.btn-default{"type" => "button"}
+          %span.fa.fa-search
+
+  %ul#notifications_table_tabs.nav.nav-pills.pushrr-pills
+    %li.active
+      %a#sent-tab{"title" => "Sent", "href" => '#sent', "data-toggle" => "tab", "aria-controls" => "sent", "aria-expanded" => "true", "role" => "tab"}
+        Sent
+    %li
+      %a#in_progress-tab{"title" => "In progress", "href" => '#in_progress', "data-toggle" => "tab", "aria-controls" => "in_progress", "role" => "tab"}
+        In Progress
+    %li
+      %a#in_queue-tab{"title" => "In queue", "href" => '#in_queue', "data-toggle" => "tab", "aria-controls" => "in_queue", "role" => "tab"}
+        In queue
+
+%div#full_notifications_table.tab-content
+  %div#sent.tab-pane.fade.in.active{"role" => "tabpanel"}
+    %div#no-more-tables.pushrr-table
+      %table.col-md-12.table-striped
+        %thead
+          %tr
+            %th
+              Date sent
+              %span.fa.fa-caret-down
+            %th
+              Notification text
+              %span.fa.fa-caret-down
+            %th
+              Subscribers
+              %span.fa.fa-caret-down
+            %th
+              Total reads
+              %span.fa.fa-caret-down
+            %th
+              &nbsp;
+        %tbody
+          %tr
+            %td.importance_1{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Notification text"}
+              Our new mobile product is out. Check out the...
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+          /* From here one I'll just repeat this top section */
+          %tr
+            %td.importance_1{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Notification text"}
+              Our new mobile product is out. Check out the...
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+          %tr
+            %td.importance_1{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Notification text"}
+              Our new mobile product is out. Check out the...
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+          %tr
+            %td.importance_1{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Notification text"}
+              Our new mobile product is out. Check out the...
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+          %tr
+            %td.importance_1{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Notification text"}
+              Our new mobile product is out. Check out the...
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+          %tr
+            %td.importance_1{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Notification text"}
+              Our new mobile product is out. Check out the...
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+          %tr
+            %td.importance_1{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_2{"data-title" => "Notification text"}
+              Our new mobile product is out. Check out the...
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+
+  %ul.pagination.custom-input-group
+    %li
+      %a{"href" => "#", "aria-label" => "Previous", "class" => "previous"}
+        %span.fa.fa-caret-left{"aria-hidden" => "true"}
+    %li
+      %a{"href" => "#", "title" => "Page 1"}
+        1
+    %li
+      %a{"href" => "#", "title" => "Page 2"}
+        2
+    %li
+      %a{"href" => "#", "title" => "Page 3"}
+        3
+    %li
+      %a{"href" => "#", "title" => "Page 4"}
+        4
+    %li
+      %a{"href" => "#", "title" => "Page 5"}
+        5
+    %li.disabled
+      %span
+        &bull;&bull;&bull;
+    %li
+      %a{"href" => "#", "title" => "Page 88"}
+        88
+    %li
+      %a{"href" => "#", "aria-label" => "Next", "class" => "next"}
+        %span.fa.fa-caret-right{"aria-hidden" => "true"}
+
+  %div#in_progress.tab-pane.fade{"role" => "tabpanel"}
+    Here goes the content for tab In progress
+  %div#in_queue.tab-pane.fade{"role" => "tabpanel"}
+    Here goes the content for tab In queue

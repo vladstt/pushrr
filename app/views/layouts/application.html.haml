@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %title Pushrr
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %div#pushrr-wrapper
+      %div.pushrr-header.clearfix
+
+        %div.pushrr-rwd
+        %div.pushrr-logo
+        %ul#top-nav.pull-right
+          %li
+            %a
+              Support
+              %span.fa.fa-question-circle.support
+
+      = render :partial => 'dashboard/sidebar'
+      %div.push-content
+        = yield

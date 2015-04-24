@@ -1,0 +1,150 @@
+/* Showing the INTRO section */
+%div.pushrr-intro.text-center
+  %div.logo
+    =image_tag("test_logo.png", width: '200', alt: 'Pushrr')
+    %div.title
+      Welcome to your Pushrr Dashboarrrd
+    %div.subtitle
+      In case you missed our cool features, there they are in the video below
+  %div.player-frame
+    %div.embed-responsive.embed-responsive-16by9
+      %iframe.embed-responsive-item{"src" => "https://www.youtube.com/embed/aUN6RPMIoeo?showinfo=0", "frameborder" => "0"}
+
+%h1
+  Dashboard
+/* Starting the Dashboard section */
+
+%div.row
+  %div.col-md-6
+    %h2
+      Subscriber Activity
+    %h3
+      Here you can get quick stats about the activity of your subscribers
+
+    /* Showing the custom dropdown */
+    %div.clearfix
+      %div.pushrr-dropdown
+        %div.btn-group.custom-input-group
+          %span.btn.btn-default.right-border{"data-toggle" => "dropdown"}
+            %span
+              Show from
+              %span.fa.fa-angle-right
+            %span#drop-value.current-value
+              April 2014
+          %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown"}
+            %span.fa.fa-caret-down
+          /* Dropdown */
+          %ul.dropdown-menu
+            %li
+              %a(title='Action' href='#')
+            %li
+              %a(title='Action' href='#')
+            %li
+              %a(title='Action' href='#')
+            %li
+              %a(title='Action' href='#')
+            %li
+              %a(title='Action' href='#')
+    /* Starting the graph area */
+    %div.stats-summary
+      %span.push-icon.icon-sub-groups.pull-left
+      %span.stats
+        %span.counter
+          588
+        %span.counter-label
+          Subscribed in April 2014
+
+  %div.col-md-6
+    %h2
+      Recent notifications
+    %h3
+      A short list of the latest notifications from your sites
+    /* Showing the custom dropdown */
+    %div.clearfix
+      %div.pushrr-dropdown
+        %div.btn-group.custom-input-group
+          %span.btn.btn-default.right-border{"data-toggle" => "dropdown"}
+            %span
+              Show
+              %span.fa.fa-angle-right
+            %span#drop-value.current-value
+              Last 7 days
+          %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown"}
+            %span.fa.fa-caret-down
+          /* Dropdown */
+          %ul.dropdown-menu
+            %li
+              %a(title='Action' href='#')
+                Last month
+            %li
+              %a(title='Action' href='#')
+                Last 3 months
+            %li
+              %a(title='Action' href='#')
+                Last 6 months
+            %li
+              %a(title='Action' href='#')
+                All
+
+      /* Building the responsive table with the latest notifications */
+      %div#no-more-tables.pushrr-table
+        %table.col-md-12.table-striped
+          %thead
+            %tr
+              %th
+                Date sent
+              %th
+                Notification text
+              %th
+                &nbsp;
+          %tbody
+            %tr
+              %td.importance_1{"data-title" => "Date sent"}
+                11 Apr 2015
+              %td.importance_2{"data-title" => "Notification text"}
+                Our new mobile product is out. Check out the...
+              %td{"data-title" => ""}
+                %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+            /* From here one I'll just repeat this top section */
+            %tr
+              %td.importance_1{"data-title" => "Date sent"}
+                12 Apr 2015
+              %td.importance_2{"data-title" => "Notification text"}
+                Our new mobile product is out. Check out the...
+              %td{"data-title" => ""}
+                %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+            %tr
+              %td.importance_1{"data-title" => "Date sent"}
+                13 Apr 2015
+              %td.importance_2{"data-title" => "Notification text"}
+                Our new mobile product is out. Check out the...
+              %td{"data-title" => ""}
+                %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+            %tr
+              %td.importance_1{"data-title" => "Date sent"}
+                14 Apr 2015
+              %td.importance_2{"data-title" => "Notification text"}
+                Our new mobile product is out. Check out the...
+              %td{"data-title" => ""}
+                %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+            %tr
+              %td.importance_1{"data-title" => "Date sent"}
+                15 Apr 2015
+              %td.importance_2{"data-title" => "Notification text"}
+                Our new mobile product is out. Check out the...
+              %td{"data-title" => ""}
+                %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+            %tr
+              %td.importance_1{"data-title" => "Date sent"}
+                16 Apr 2015
+              %td.importance_2{"data-title" => "Notification text"}
+                Our new mobile product is out. Check out the...
+              %td{"data-title" => ""}
+                %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}
+            %tr
+              %td.importance_1{"data-title" => "Date sent"}
+                17 Apr 2015
+              %td.importance_2{"data-title" => "Notification text"}
+                Our new mobile product is out. Check out the...
+              %td{"data-title" => ""}
+                %a.fa.fa-angle-right.wider-click-area{"title" => "View notification", "href" => "#"}

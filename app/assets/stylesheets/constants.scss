@@ -1,0 +1,66 @@
+/* Font sizes */
+$push-small: 11px;
+$push-text: 14px;
+$push-subtext: 16px;
+
+/* Colors */
+$push-blue: #4A90E2;
+$push-dark-blue: #334C6A;
+$push-orange: #F5A623;
+$grey: #999;
+
+/* Shadows */
+$push-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.10);
+
+/* Corners */
+$standard: 4px;
+
+.sidebar-link-action {
+  border-radius: 0 4px 4px 0;
+  background: $push-blue;
+  box-shadow: $push-shadow;
+  color: white;
+  text-decoration: none;
+}
+
+/* This should remove all the ugly bootstrap borders & stuff */
+.custom-input-group {
+  box-shadow: $push-shadow;
+  -webkit-border-radius: $standard;
+  -moz-border-radius: $standard;
+  border-radius: $standard;
+  background: white;
+  * {
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .form-control {
+    height: 36px;
+    padding: 7px 12px;
+  }
+  .btn {
+    padding: 8px 12px;
+  }
+  .right-border {
+    border-right: 2px solid #ddd !important;
+    color: #999;
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  a.previous {
+    border-right: 2px solid #ddd !important;
+  }
+  a.next {
+    border-left: 1px solid #ddd !important;
+  }
+  .fa {
+    margin: 0 8px;
+  }
+  .current-value {
+    font-weight: 700;
+    color: #333
+  }
+  .dropdown-toggle {
+    color: #999;
+  }
+}
