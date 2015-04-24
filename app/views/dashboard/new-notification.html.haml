@@ -1,0 +1,128 @@
+%h1
+  Send a new notification
+
+/* Starting the New Notifications section */
+
+%div.row
+  %div.col-md-5
+    %h4.margin-top-30
+      Notification details
+    %div.notification-form.pushrr-forms.margin-top-30
+      %div.input-group.input-group-lg.custom-large-form-control
+        %span.input-group-addon
+          Notification text
+        %input.form-control{"type" => "text", "class" => "form-control", "placeholder" => "Enter the notification text here"}
+      %div.input-group.input-group-lg.custom-large-form-control
+        %span.input-group-addon
+          Push URL
+        %input.form-control{"type" => "text", "class" => "form-control", "placeholder" => "Enter a URL to push your subscribers to (e.g. mysite.com)"}
+
+    %h4.margin-top-30
+      Recipients
+    %div.notification-form.pushrr-forms.margin-top-30
+      %div
+        %label.custom-label
+          %input{"type" => "checkbox"}
+          Send to all recipients
+          %small
+            You will send this notification to 84 subscribers
+      %div.margin-top-20
+        %label.custom-label
+          %input{"type" => "checkbox"}
+          Sent to a custom list
+
+
+    %ul.nav.nav-pills.pushrr-pills.margin-top-30.smaller-pills
+      %li.active
+        %a#country-tab{"title" => "Country", "href" => '#to_countries', "data-toggle" => "tab", "aria-controls" => "to_countries", "aria-expanded" => "true", "role" => "tab"}
+          Country
+      %li
+        %a#groups-tab{"title" => "Groups", "href" => '#to_groups', "data-toggle" => "tab", "aria-controls" => "to_groups", "role" => "tab"}
+          Groups
+
+    %div.tab-content
+      %div#to_countries.tab-pane.fade.in.active{"role" => "tabpanel"}
+        %div.notification-form.pushrr-forms.margin-top-30
+          %div.margin-top-10
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              All countries
+
+          %div.margin-top-20
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              =image_tag("flags/DE@2x.png", width: '20', class: "margin-right-5 margin-left-5")
+              Germany
+              %small.inline
+                12 Subscribers
+
+          %div.margin-top-10
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              =image_tag("flags/US@2x.png", width: '20', class: "margin-right-5 margin-left-5")
+              United States of America
+              %small.inline
+                12 Subscribers
+
+          %div.margin-top-10
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              =image_tag("flags/JP@2x.png", width: '20', class: "margin-right-5 margin-left-5")
+              Japan
+              %small.inline
+                12 Subscribers
+
+          %div.margin-top-10
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              =image_tag("flags/GB@2x.png", width: '20', class: "margin-right-5 margin-left-5")
+              United Kingdom
+              %small.inline
+                12 Subscribers
+
+          %div.margin-top-10
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              =image_tag("flags/BR@2x.png", width: '20', class: "margin-right-5 margin-left-5")
+              Brazil
+              %small.inline
+                12 Subscribers
+          %div.margin-top-10.grey
+            Selected
+            %strong
+              0
+            subscribers for the country filter
+
+      %div#to_groups.tab-pane.fade{"role" => "tabpanel"}
+        %div.notification-form.pushrr-forms.margin-top-30
+          %div.margin-top-10
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              All groups
+
+          %div.margin-top-20
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              Fashion
+              %small.inline
+                34 Subscribers
+
+          %div.margin-top-10
+            %label.custom-label
+              %input{"type" => "checkbox"}
+              Gadgets
+              %small.inline
+                22
+
+          %div.margin-top-10.grey
+            Selected
+            %strong
+              0
+            subscribers for the groups filter
+
+      %div.margin-top-50
+        %a.new-notification.bigger{"title" => "New notification", "href" => "/new-notification"}
+          Send notification
+  %div.col-md-4.col-md-offset-2
+    %h4.margin-top-30
+      This is how your notification will look like

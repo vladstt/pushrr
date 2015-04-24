@@ -7,16 +7,7 @@
     = csrf_meta_tags
   %body
     %div#pushrr-wrapper
-      %div.pushrr-header.clearfix
-
-        %div.pushrr-rwd
-        %div.pushrr-logo
-        %ul#top-nav.pull-right
-          %li
-            %a
-              Support
-              %span.fa.fa-question-circle.support
-
+      = render :partial => 'dashboard/header'
       = render :partial => 'dashboard/sidebar'
       %div.push-content
         = yield

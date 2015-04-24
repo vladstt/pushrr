@@ -1,12 +1,12 @@
 %h1
   Subscribers
-  %sup
+  %span.grey.light
     (84)
 /* Starting the Notifications section */
 
 %div.row
   %div.col-md-8
-    %div.top-table-area.is-single-push-it-up
+    %div.top-table-area
       %div.pull-right.table-search-input
         %div.input-group.custom-input-group
           %input.form-control{"type" => "text", "placeholder" => "Search for a subscriber"}
@@ -22,7 +22,8 @@
         %thead
           %tr
             %th{"width" => "1%"}
-              %input{"type" => "checkbox"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
             %th
               Date subscribed
               %span.fa.fa-caret-down
@@ -37,10 +38,133 @@
         %tbody
           %tr
             %td.importance_1{"data-title" => "Select"}
-              %input{"type" => "checkbox"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
             %td.importance_1{"data-title" => "Date subscribed"}
               11 Apr 2015
             %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/DE@2x.png", width: '20') # we build this like: {country_abbr}@2x.png
+              Germany
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+          /* repeating everything again */
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              12 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/US@2x.png", width: '20')
+              United States of America
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              13 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/JP@2x.png", width: '20')
+              Japan
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              14 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/GB@2x.png", width: '20')
+              United Kingdom
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              15 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/DE@2x.png", width: '20')
+              Germany
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              12 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/US@2x.png", width: '20')
+              United States of America
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              13 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/JP@2x.png", width: '20')
+              Japan
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              14 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/GB@2x.png", width: '20')
+              United Kingdom
+            %td.importance_2{"data-title" => "Group"}
+              Fashion
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete subscriber", "href" => "#"}
+
+          %tr
+            %td.importance_1{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_1{"data-title" => "Date subscribed"}
+              15 Apr 2015
+            %td.importance_2{"data-title" => "Country"}
+              %span.country-flag
+                =image_tag("flags/DE@2x.png", width: '20')
               Germany
             %td.importance_2{"data-title" => "Group"}
               Fashion
@@ -77,5 +201,41 @@
         %a{"href" => "#", "aria-label" => "Next", "class" => "next"}
           %span.fa.fa-caret-right{"aria-hidden" => "true"}
 
-  %div.col-md-4
-    right-col
+  %div.col-md-4.side-notes-table
+    %h4
+      Subscriber groups
+    %ul.side-notes
+      %li
+        %a{"href" => "#", "title" => "Fashion"}
+          Fashion
+        %span
+          12 Subscribers
+      %li
+        %a{"href" => "#", "title" => "Gadgets"}
+          Gadgets
+        %span
+          21 Subscribers
+
+    %h4
+      Subscriber by location
+    %ul.side-notes
+      %li
+        %a{"href" => "#", "title" => "Germany"}
+          Germany
+        %span
+          9 Subscribers
+      %li
+        %a{"href" => "#", "title" => "United States of America"}
+          United States of America
+        %span
+          33 Subscribers
+      %li
+        %a{"href" => "#", "title" => "Japan"}
+          Japan
+        %span
+          18 Subscribers
+      %li
+        %a{"href" => "#", "title" => "Brazil"}
+          Brazil
+        %span
+          2 Subscribers
