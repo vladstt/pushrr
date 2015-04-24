@@ -1,0 +1,225 @@
+%h1 Hi Emily!
+
+%ul.nav.nav-pills.pushrr-pills.margin-top-30
+  %li.active
+    %a#websites-tab{"title" => "Your sites", "href" => '#websites', "data-toggle" => "tab", "aria-controls" => "sent", "aria-expanded" => "true", "role" => "tab"}
+      Your sites
+  %li
+    %a#account-tab{"title" => "Account info", "href" => '#account_info', "data-toggle" => "tab", "aria-controls" => "in_progress", "role" => "tab"}
+      Account info
+  %li
+    %a#billing-tab{"title" => "Billing", "href" => '#billing', "data-toggle" => "tab", "aria-controls" => "in_queue", "role" => "tab"}
+      Billing
+
+%div.tab-content
+  %div#websites.tab-pane.fade.in.active{"role" => "tabpanel"}
+    %div.row
+      %div.col-md-12
+        %h4.margin-top-30
+          You have 4 sites
+
+        %div.cards-set.margin-top-30
+          %div.card
+            %div.logo
+              =image_tag("mobelio@2x.png", width: '110')
+            %span.website-label
+              mobelio.com
+            %span.fa.fa-times-circle
+
+          %div.card
+            %div.logo
+
+            %span.website-label
+              welcome.com
+            %span.fa.fa-times-circle
+
+          %div.card
+            %div.logo
+
+            %span.website-label
+              example.com
+            %span.fa.fa-times-circle
+
+          %div.card
+            %div.logo
+
+            %span.website-label
+              click.com
+            %span.fa.fa-times-circle
+
+          %div.card
+            %div.logo
+              %a.add-website{"href" => "#", "title" => "Add website"}
+                %span.plus
+                  %span.fa.fa-plus
+
+  %div#account_info.tab-pane.fade{"role" => "tabpanel"}
+    %div.row.margin-top-30
+      %div.col-md-5
+        %div.notification-form.pushrr-forms.margin-top-20
+        %div.input-group.input-group-lg.custom-large-form-control
+          %span.input-group-addon
+            Email address
+          %input.form-control{"type" => "text", "class" => "form-control", "value" => "contact@mobelio.com"}
+
+        %div.input-group.input-group-lg.custom-large-form-control.margin-top-20
+          %span.input-group-addon
+            Billing email (optional)
+          %input.form-control{"type" => "text", "class" => "form-control", "value" => ""}
+
+        %div.input-group.input-group-lg.custom-large-form-control.margin-top-20
+          %span.input-group-addon
+            Password
+          %input.form-control{"type" => "password", "class" => "form-control", "value" => ""}
+
+        %div.input-group.input-group-lg.custom-large-form-control.margin-top-20
+          %span.input-group-addon
+            Password again
+          %input.form-control{"type" => "password", "class" => "form-control", "value" => ""}
+
+        %a.orange-btn.margin-top-10{"title" => "Link to Pushrr", "href" => "#"}
+          Save changes
+
+  %div#billing.tab-pane.fade{"role" => "tabpanel"}
+    %div.row
+      %div.col-md-8
+
+        /* Showing the current plan */
+
+        %div.current-plan.margin-top-30
+          %div.headline
+            You are currently on the:
+          %div.plan
+            The one-time plan - $20.00/mo
+          %div.row.margin-top-30
+            %div.col-md-6
+              %span.bold
+                Current Usage
+            %div.col-md-6.text-right
+              %span.bold
+                3.551
+              of 1,000,000 Notifications
+          %div.progress-bar.margin-top-10
+            %div.progress-percent{"style" => "width: 19%"}
+        %h2.margin-top-40
+          Payment history
+        %h3
+          Here you can find all the payments made to Pushrr. Thank you!
+        /* Showing the custom dropdown */
+        %div.clearfix
+          %div.pushrr-dropdown
+            %div.btn-group.custom-input-group
+              %span.btn.btn-default.right-border{"data-toggle" => "dropdown"}
+                %span
+                  Show
+                  %span.fa.fa-angle-right
+                %span#drop-value.current-value
+                  This Year
+              %button.btn.btn-default.dropdown-toggle{"data-toggle" => "dropdown"}
+                %span.fa.fa-caret-down
+              /* Dropdown */
+              %ul.dropdown-menu
+                %li
+                  %a(title='Action' href='#')
+                    Last month
+                %li
+                  %a(title='Action' href='#')
+                    Last 3 months
+                %li
+                  %a(title='Action' href='#')
+                    Last 6 months
+                %li
+                  %a(title='Action' href='#')
+                    All
+
+          /* Building the responsive table with the latest notifications */
+          %div#no-more-tables.pushrr-table
+            %table.col-md-12.table-striped
+              %thead
+                %tr
+                  %th
+                    Billing period
+                  %th
+                    Transaction
+                  %th
+                    Description
+                  %th
+                    Amount
+                  %th
+                    Billed
+              %tbody
+                %tr
+                  %td.importance_1{"data-title" => "Billing period"}
+                    Apr - May 2015
+                  %td.importance_2{"data-title" => "Transaction"}
+                    0005
+                  %td.importance_2{"data-title" => "Description"}
+                    One-time Plan
+                  %td.importance_2{"data-title" => "Amount"}
+                    $ 20
+                  %td.importance_1{"data-title" => "Billed"}
+                    23 Apr 2015
+                /* Copying the same row again */
+
+                %tr
+                  %td.importance_1{"data-title" => "Billing period"}
+                    Apr - May 2015
+                  %td.importance_2{"data-title" => "Transaction"}
+                    0005
+                  %td.importance_2{"data-title" => "Description"}
+                    One-time Plan
+                  %td.importance_2{"data-title" => "Amount"}
+                    $ 20
+                  %td.importance_1{"data-title" => "Billed"}
+                    23 Apr 2015
+
+                %tr
+                  %td.importance_1{"data-title" => "Billing period"}
+                    Apr - May 2015
+                  %td.importance_2{"data-title" => "Transaction"}
+                    0005
+                  %td.importance_2{"data-title" => "Description"}
+                    One-time Plan
+                  %td.importance_2{"data-title" => "Amount"}
+                    $ 20
+                  %td.importance_1{"data-title" => "Billed"}
+                    23 Apr 2015
+
+        /* Moving to cards section */
+        %h2.margin-top-40
+          Your cards
+          %h3
+            Here is a list with your saved cards.
+
+        %div.cc-cards.margin-top-30
+          /* Credit card block */
+          %div.cc-block
+            %div.cc-item
+              %div.number
+                XXXX-XXXX-XXXX-3016
+              %div.type.mastercard
+                =image_tag("mastercard@2x.png", width: '40')
+              %a.card-action.delete{"href" => "#", "title" => "Delete"}
+                Delete Card
+              %a.card-action.default{"href" => "#", "title" => "Make default"}
+                Default Card
+
+          /* Credit card block */
+          %div.cc-block
+            %div.cc-item
+              %div.number
+                XXXX-XXXX-XXXX-9228
+              %div.type.visa
+                =image_tag("visa@2x.png", width: '40')
+              %a.card-action.delete{"href" => "#", "title" => "Delete"}
+                Delete
+              %a.card-action.make-default{"href" => "#", "title" => "Make default"}
+                Make Default
+
+          /* Credit card block */
+          %div.cc-block
+            %div.cc-item.add-cc
+              %div.number
+                %a.add-website{"href" => "#", "title" => "Add website"}
+                  %span.plus
+                    %span.fa.fa-plus

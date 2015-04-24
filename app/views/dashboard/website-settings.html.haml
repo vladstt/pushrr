@@ -1,0 +1,158 @@
+%h1
+  Website settings: mobelio.com
+/* Starting the Website settings section */
+
+/* Le tabs */
+%div.top-table-area
+
+  %ul#notifications_table_tabs.nav.nav-pills.pushrr-pills
+    %li.active
+      %a#general-settings-tab{"title" => "General Settings", "href" => '#settings', "data-toggle" => "tab", "aria-controls" => "sent", "role" => "tab"}
+        General Settings
+    %li
+      %a#integration-tab{"title" => "Integration", "href" => '#integration', "data-toggle" => "tab", "role" => "tab"}
+        Integration
+    %li
+      %a#api-tab{"title" => "API", "href" => '#api', "data-toggle" => "tab", "role" => "tab"}
+        API
+    %li
+      %a#installation-tab{"title" => "API", "href" => '#installation', "data-toggle" => "tab", "role" => "tab"}
+        Installation
+    %li
+      %a#export-tab{"title" => "API", "href" => '#export', "data-toggle" => "tab", "role" => "tab"}
+        Export
+
+%div.tab-content
+  %div#settings.tab-pane.fade.in.active{"role" => "tabpanel"}
+    %div.row
+      %div.col-md-5
+        %div.notification-form.pushrr-forms.margin-top-20
+        %div.input-group.input-group-lg.custom-large-form-control
+          %span.input-group-addon
+            Site name
+          %input.form-control{"type" => "text", "class" => "form-control", "placeholder" => "Enter your website name", "value" => "mobelio.com"}
+
+        %h4.margin-top-50
+          Site logo
+        %div.image-section
+          %div.website-icon.margin-top-30
+          %button.custom-input-group.logo-upload{"type" => "button"}
+            Change logo
+
+        %div.switch-section.margin-top-50
+          %label.switch.pull-left
+            %input.switch-input{"type" => "checkbox", "checked" => "checked", "id" => "switch_1"}
+              %span.switch-label{"data-on" => "On", "data-off" => "Off"}
+              %span.switch-handle
+          %label{"for" => "switch_1"}
+            Send a welcome notification
+            %small.grey.light
+              %br
+              Enabling will automatically send a welcome notification to every subscriber.
+
+  %div#integration.tab-pane.fade{"role" => "tabpanel"}
+
+    %div.mailchimp-integration
+      %div.overhidden
+        %div.pull-left.margin-right-10
+          =image_tag("the_chimp.png", width: '50', :class => "margin-top-10")
+        %div.pull-left.text-left.margin-left-10
+          %h4
+          Mailchimp
+          %br
+          %small.grey.light
+            Link your pushrr account to Mailchimp
+          %br
+          %a.orange-btn.margin-top-10{"title" => "Link to Pushrr", "href" => "#"}
+            Link to Pushrr
+
+    %div.switch-section.margin-top-50
+      /* Adding a DIV for row clearing */
+      %div.margin-top-10
+        %label.switch.pull-left
+          %input.switch-input{"type" => "checkbox", "id" => "switch_2"}
+            %span.switch-label{"data-on" => "On", "data-off" => "Off"}
+            %span.switch-handle
+        %label{"for" => "switch_2"}
+          Google Analytics Campaign Code
+          %small.grey.light
+            %br
+            Enabling will add Google Analytics Campaign codes to all clicked URLs.
+
+      /* Second switch */
+      %div.margin-top-30
+        %label.switch.pull-left
+          %input.switch-input{"type" => "checkbox", "id" => "switch_3"}
+            %span.switch-label{"data-on" => "On", "data-off" => "Off"}
+            %span.switch-handle
+        %label{"for" => "switch_3"}
+          RSS Auto-Polling
+          %small.grey.light
+            %br
+            Enabling this will lorem ipsum dolor sit amet RSS auto polling.
+  %div#api.tab-pane.fade{"role" => "tabpanel"}
+    %h4
+      The API key is used for registration and the key/secret are used to make server-side API calls.
+      %br
+      For more information on how to use the Pushrr API,
+      %a{"href" => "#"}
+        view the documentation
+
+    %div.row
+      %div.col-md-5
+        %div.notification-form.pushrr-forms.margin-top-20
+        %div.input-group.input-group-lg.custom-large-form-control
+          %span.input-group-addon
+            API Key
+          %input.form-control{"type" => "text", "class" => "form-control", "value" => "67a5b21d65484a3592d1122601070fa9"}
+          %a.content-copy{"href" => "#"}
+            %span.icon-copy
+            COPY
+
+        %div.input-group.input-group-lg.custom-large-form-control.margin-top-20
+          %span.input-group-addon
+            API Secret
+          %input.form-control{"type" => "text", "class" => "form-control", "value" => "Hidden", "disabled" => "disabled"}
+          %a.content-copy{"href" => "#"}
+            %span.icon-copy
+            COPY
+
+        %a.orange-btn{"title" => "Link to Pushrr", "href" => "#"}
+          Reveal secret key
+
+  %div#installation.tab-pane.fade{"role" => "tabpanel"}
+    %h4
+      Copy and paste the code below into your web page, just before the closing </head> tag.
+      %br
+      If your website uses templates to generate pages, enter it just before the closing </head> tag in the file that contains the <head> section.
+
+    %div.row
+      %div.col-md-7
+        %div.notification-form.pushrr-forms.margin-top-20
+        %div.input-group.input-group-lg.custom-large-form-control
+          %input.form-control{"type" => "text", "class" => "form-control", "value" => "<script src='//cdn.pushrr.com/pushrrjs/67a5b21d65484a3592d1122601070fa9' async></script>"}
+          %a.content-copy{"href" => "#"}
+            %span.icon-copy
+            COPY
+
+        %small.light.grey.margin-top-20
+          NOTE: If this script is being used on multiple domains, please
+          %a.bold{"href" => "#", "title" => "Contact support"}
+            contact support
+          to make sure it behaves correctly.
+        %div.margin-top-30
+          %h4
+            For Chrome support, download the installation files below.
+            %br
+            Copy the files to the top-level directory (root, or '/') of your server, and you're good to go!
+
+            %a.custom-input-group.download-extension.margin-top-30{"href" => "#", "title" => "Download Chrome Installation Files"}
+              =image_tag("chrome@2x.png", width: '30')
+              Download Chrome Installation Files
+
+  %div#export.tab-pane.fade{"role" => "tabpanel"}
+    %h4
+      =image_tag("crown@2x.png", width: '50', :class => "margin-right-10")
+      You need to go PRO in order to have access to this section.
+      %a{"href" => "#", "title" => "Pricing plans"}
+        Check out the pricing plans.

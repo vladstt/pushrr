@@ -29,6 +29,9 @@ $standard: 4px;
 .light {
   font-weight: 300;
 }
+.bold {
+  font-weight: 700;
+}
 
 /* This should remove all the ugly bootstrap borders & stuff */
 .custom-input-group {
@@ -37,6 +40,7 @@ $standard: 4px;
   -moz-border-radius: $standard;
   border-radius: $standard;
   background: white;
+  border: 0;
   * {
     border: 0 !important;
     box-shadow: none !important;

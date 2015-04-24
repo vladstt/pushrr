@@ -1,0 +1,309 @@
+%a.orange-btn.pull-right.margin-top-30{"title" => "Add a custom group", "href" => "#"}
+  Add a custom group
+%h1
+  Subscribers Groups
+/* Starting the Subscribers Groups section */
+
+/* Le tabs */
+%div.top-table-area
+  %div.pull-right.table-search-input
+    %div.input-group.custom-input-group
+      %input.form-control{"type" => "text", "placeholder" => "Search for a group"}
+      %span.input-group-btn
+        %button.btn.btn-default{"type" => "button"}
+          %span.fa.fa-search
+
+  %ul#notifications_table_tabs.nav.nav-pills.pushrr-pills
+    %li.active
+      %a#sent-tab{"title" => "Custom groups", "href" => '#custom_groups', "data-toggle" => "tab", "aria-controls" => "sent", "aria-expanded" => "true", "role" => "tab"}
+        Custom groups
+    %li
+      %a#in_progress-tab{"title" => "Groups by location", "href" => '#groups_by_location', "data-toggle" => "tab", "aria-controls" => "in_progress", "role" => "tab"}
+        Groups by location
+
+%div.tab-content
+  %div#custom_groups.tab-pane.fade.in.active{"role" => "tabpanel"}
+    %div.pushrr-table
+      %table.col-md-12.table-striped
+        %thead
+          %tr
+            %th{"width" => "1%"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %th
+              Group name
+              %span.fa.fa-caret-down
+            %th
+              Number of Subscribers
+              %span.fa.fa-caret-down
+            %th
+              Total reads
+              %span.fa.fa-caret-down
+            %th
+              Opt In rate
+              %span.fa.fa-caret-down
+            %th
+              &nbsp;
+        %tbody
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          /* From here one I'll just repeat this top section */
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              11 Apr 2015
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+
+    %ul.pagination.custom-input-group
+      %li
+        %a{"href" => "#", "aria-label" => "Previous", "class" => "previous"}
+          %span.fa.fa-caret-left{"aria-hidden" => "true"}
+      %li
+        %a{"href" => "#", "title" => "Page 1"}
+          1
+      %li
+        %a{"href" => "#", "title" => "Page 2"}
+          2
+      %li
+        %a{"href" => "#", "title" => "Page 3"}
+          3
+      %li
+        %a{"href" => "#", "title" => "Page 4"}
+          4
+      %li
+        %a{"href" => "#", "title" => "Page 5"}
+          5
+      %li.disabled
+        %span
+          &bull;&bull;&bull;
+      %li
+        %a{"href" => "#", "title" => "Page 88"}
+          88
+      %li
+        %a{"href" => "#", "aria-label" => "Next", "class" => "next"}
+          %span.fa.fa-caret-right{"aria-hidden" => "true"}
+
+  %div#groups_by_location.tab-pane.fade{"role" => "tabpanel"}
+    %div.pushrr-table
+      %table.col-md-12.table-striped
+        %thead
+          %tr
+            %th{"width" => "1%"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %th
+              Country
+              %span.fa.fa-caret-down
+            %th
+              Number of Subscribers
+              %span.fa.fa-caret-down
+            %th
+              Total reads
+              %span.fa.fa-caret-down
+            %th
+              Opt In rate
+              %span.fa.fa-caret-down
+            %th
+              &nbsp;
+        %tbody
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              %span.country-flag
+                =image_tag("flags/DE@2x.png", width: '20') # we build this like: {country_abbr}@2x.png
+              Germany
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          /* From here one I'll just repeat this top section */
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              %span.country-flag
+                =image_tag("flags/GB@2x.png", width: '20') # we build this like: {country_abbr}@2x.png
+              United Kingdom
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              %span.country-flag
+                =image_tag("flags/JP@2x.png", width: '20') # we build this like: {country_abbr}@2x.png
+              Japan
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              %span.country-flag
+                =image_tag("flags/BR@2x.png", width: '20') # we build this like: {country_abbr}@2x.png
+              Brazil
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+          %tr
+            %td.check{"data-title" => "Select"}
+              %label.custom-label
+                %input{"type" => "checkbox"}
+            %td.importance_2{"data-title" => "Date sent"}
+              %span.country-flag
+                =image_tag("flags/US@2x.png", width: '20') # we build this like: {country_abbr}@2x.png
+              United States of America
+            %td.importance_3{"data-title" => "Notification text"}
+              1.884
+            %td.importance_3{"data-title" => "Subscribers"}
+              1.884
+            %td.importance_3{"data-title" => "Total reads"}
+              2.110
+            %td.text-right{"data-title" => ""}
+              %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+
+    %ul.pagination.custom-input-group
+      %li
+        %a{"href" => "#", "aria-label" => "Previous", "class" => "previous"}
+          %span.fa.fa-caret-left{"aria-hidden" => "true"}
+      %li
+        %a{"href" => "#", "title" => "Page 1"}
+          1
+      %li
+        %a{"href" => "#", "title" => "Page 2"}
+          2
+      %li
+        %a{"href" => "#", "title" => "Page 3"}
+          3
+      %li
+        %a{"href" => "#", "title" => "Page 4"}
+          4
+      %li
+        %a{"href" => "#", "title" => "Page 5"}
+          5
+      %li.disabled
+        %span
+          &bull;&bull;&bull;
+      %li
+        %a{"href" => "#", "title" => "Page 88"}
+          88
+      %li
+        %a{"href" => "#", "aria-label" => "Next", "class" => "next"}
+          %span.fa.fa-caret-right{"aria-hidden" => "true"}

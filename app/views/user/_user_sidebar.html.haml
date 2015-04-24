@@ -1,0 +1,44 @@
+%div.pull-left.user-sidebar
+  %div.user-area.text-center.margin-top-30
+    %div.user-avatar
+      =image_tag("emily.png", width: '140')
+      %div.user-name
+        Emily Wallace
+    %div.user-links
+      %a.active{"title" => "Your account", "href" => "/user-account"}
+        Your account
+      &bull;
+      %a(title='Logout' href='#')
+        Logout
+
+  %div.margin-top-20.text-center
+    %a.outline-button{"href" => "#"}
+      Update your avatar
+
+  %div.short-stats.margin-top-50
+    %div.stat
+      %span.user-icon.icon-subscribers.pull-left
+      %span.data
+        %span.light
+          Subscribers on
+          %span.bold
+            4
+          Sites
+        %span.bold
+          48
+
+    %div.stat
+      %span.user-icon.icon-notifications.pull-left
+      %span.data
+        %span.light
+          Total pushes sent
+        %span.bold
+          841
+
+    %div.stat
+      %span.user-icon.icon-like.pull-left
+      %span.data
+        %span.light
+          Total opt-in rate
+        %span.bold
+          62%

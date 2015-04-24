@@ -1,0 +1,203 @@
+@import "constants";
+@import "general";
+
+/* This is what's going on in the sidebar */
+.user-sidebar {
+  background: $push-dark-blue;
+  background-image: image-url("user_blur.png");
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 100%;
+  background-position: 0px -40px;
+}
+.user-content {
+  margin-left: 280px;
+}
+
+.user-links {
+  a.active {
+    border-bottom: 3px solid $push-blue;
+    padding-bottom: 3px;
+  }
+}
+
+.outline-button {
+  border-radius: 50px;
+  border: 1px solid white;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px;
+  line-height: 1;
+}
+
+.short-stats {
+  padding: 0 30px;
+  color: white;
+  .user-icon {
+    font-size: 48px;
+    margin-right: 15px;
+    &.icon-like {
+      font-size: 42px;
+    }
+  }
+  .stat {
+    overflow: hidden;
+    padding-bottom: 30px;
+  }
+  .data {
+    display: block;
+    padding-top: 10px;
+    font-size: $push-subtext;
+  }
+  .light + .bold {
+    display: block;
+    font-size: 40px;
+  }
+}
+
+.cards-set {
+
+  .logo {
+    display: table-cell;
+    height: 140px;
+    vertical-align: middle;
+    width: 150px;
+    text-align: center;
+    position: relative;
+  }
+  .card {
+    box-shadow: $push-shadow;
+    -webkit-border-radius: $standard;
+    -moz-border-radius: $standard;
+    border-radius: $standard;
+    background: white;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    display: inline-block;
+    margin: 0 20px 20px 0;
+    vertical-align: top;
+    &:hover {
+      .fa-times-circle {
+        display: block;
+        cursor: pointer;
+      }
+    }
+    .website-label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      font-size: $push-small;
+      color: $grey;
+    }
+    .fa-times-circle {
+      position: absolute;
+      font-size: 24px;
+      color: #D0021B;
+      right: -12px;
+      top: -12px;
+      display: none;
+    }
+  }
+  a {
+    .plus {
+      margin-top: 10px;
+    }
+    &:hover {
+      .plus {
+        background-color: $push-blue;
+      }
+
+    }
+  }
+
+}
+
+/* The cards */
+.cc-block {
+  display: inline-block;
+  margin: 0 20px 20px 0;
+  vertical-align: top;
+  position: relative;
+}
+.cc-item {
+  background-image: linear-gradient(-33deg, #828282 12%, #A8A8A8 79%);
+  border-radius: 20px;
+  width: 180px;
+  height: 120px;
+  color: white;
+  text-align: center;
+
+  .number {
+    line-height: 120px;
+  }
+  &.add-cc {
+    background-image: linear-gradient(-33deg, #D2D2D2 12%, #E7E7E7 79%);
+    border-radius: 20px;
+  }
+  .type {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    line-height: 1;
+  }
+  .card-action {
+    line-height: 1;
+    display: block;
+    border-radius: 3px;
+    font-size: 11px;
+    padding: 5px 10px;
+    font-weight: 400;
+    background: #9B9B9B;
+    width: 80%;
+    margin: 7px auto;
+    color: white;
+    &.default {
+      background: $push-orange;
+    }
+    &.make-default {
+      background: white;
+      color: $grey;
+    }
+  }
+  a:hover {
+    .plus {
+      background: $push-blue;
+    }
+  }
+
+}
+
+.current-plan {
+  box-shadow: $push-shadow;
+  -webkit-border-radius: $standard;
+  -moz-border-radius: $standard;
+  border-radius: $standard;
+  background: white;
+  padding: 25px;
+  overflow: hidden;
+  .headline {
+    font-size: $push-subtext;
+  }
+  .plan {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .progress-bar {
+    box-shadow: $push-shadow;
+    -webkit-border-radius: $standard;
+    -moz-border-radius: $standard;
+    border-radius: $standard;
+    background: #F1F1F1;
+    height: 25px;
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    .progress-percent {
+      margin: -5px 0;
+      height: 35px;
+      background: #B8E986;
+    }
+  }
+}
