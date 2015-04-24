@@ -1,0 +1,20 @@
+%h2 Welcome to Pushrr
+%h3 Let’s get started. First things first, you need to add you site
+
+%div.row.margin-top-50
+  %div.col-md-5
+    %div.notification-form.pushrr-forms.margin-top-20
+    %div.input-group.input-group-lg.custom-large-form-control
+      /* Website name */
+      %input.form-control{"type" => "text", "class" => "form-control", "placeholder" => "Your website name"}
+
+      /* Website URL */
+      %input.form-control.margin-top-20{"type" => "text", "class" => "form-control", "placeholder" => "Enter your website URL"}
+
+    /* Upload image */
+    %div.image-section
+      %button.custom-input-group.logo-upload{"type" => "button"}
+        Add a logo
+    /* Continue */
+    %a.orange-btn.margin-top-30.bigger{"title" => "Link to Pushrr", "href" => "#"}
+      Next step

@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
   get 'wizard/steps'
 
+  get 'step-1' => 'wizard#step-1'
+  get 'step-2' => 'wizard#step-2'
+
   get 'dashboard/index'
 
   get '/' => 'dashboard#index'
