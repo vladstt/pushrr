@@ -28,6 +28,31 @@
 
 
     %div#no-more-tables.pushrr-table
+
+      /* Here comes the filtering in-table modal
+      /* this modal will need to "know" the width & height of the modal so that it can cover the entire surface with a black overlay
+      /* below you'll find the most complex one, the one with a calendar included for dates
+      /* I used this one for this HTML: http://www.daterangepicker.com/
+
+      %div.in-table-filters
+        %span.icon-close.kill-modal
+        %h4 Search by custom date
+
+        %div.inline-filters
+          %span Show from the:
+          %a.outline-button.selected{"href" => "#", "title" => "Last 7 days"}
+            Last 7 days
+          %a.outline-button{"href" => "#", "title" => "Last 30 days"}
+            Last 30 days
+          %a.outline-button{"href" => "#", "title" => "Last 3 months"}
+            Last 3 months
+        /* Starting calendar */
+        %form.form-horizontal
+          %input#reservation.hidden{"type" => "text", "value" => "03/18/2013 - 03/23/2013"}
+
+
+
+
       %table.col-md-12.table-striped
         %thead
           %tr
@@ -36,7 +61,8 @@
                 %input{"type" => "checkbox"}
             %th
               Date subscribed
-              %span.fa.fa-caret-down
+              /* Adding the class to open the big in-table filters */
+              %span.fa.fa-caret-down.date-trigger
             %th
               Country
               %span.fa.fa-caret-down

@@ -15,7 +15,6 @@ Rails.application.routes.draw do
   get 'notifications' => 'dashboard#notifications'
   get 'subscribers' => 'dashboard#subscribers'
   get 'subscribers-groups' => 'dashboard#subscribers-groups'
-  get 'settings' => 'dashboard#settings'
   get 'new-notification' => 'dashboard#new-notification'
   get 'website-settings' => 'dashboard#website-settings'
 

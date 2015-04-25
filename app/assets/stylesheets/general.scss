@@ -123,14 +123,90 @@ body {
       font-size: $push-small;
       color: white;
       font-weight: 300;
-      span {
-        margin-right: 5px;
-      }
-      a {
+      position: relative;
+
+      .dropdown-toggle {
         color: white;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      .switch-indicator:after {
+        margin-right: 5px;
+        font-family: "FontAwesome";
+        content: "\f0d7";
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        left: 0;
+        top: 1px;
+      }
+
+      &.open {
+        .switch-indicator:after {
+          margin-right: 5px;
+          font-family: "pushrr";
+          content: "g";
+          font-size: 8px;
+          margin-bottom: 1px;
+          margin-top: 2px;
+        }
+      }
+
+    }
+
+  }
+
+  /* Website switcher */
+  .website-switch {
+    min-width: 210px;
+    @extend .pushrr-container;
+    padding-bottom: 0;
+    overflow: hidden;
+    margin-left: 45px;
+    a {
+      padding: 15px 45px 15px 15px !important;
+      overflow: hidden;
+      display: block;
+      color: #333;
+      white-space: normal;
+      font-weight: 700 !important;
+      position: relative;
+      border-bottom: 1px solid #eee;
+
+      &:after {
+        font-family: 'FontAwesome';
+        content: "\f105";
+        position: absolute;
+        right: 15px;
+        top: 21px;
+        font-size: 19px;
+        color: $grey;
+      }
+
+      .website-icon {
+        float: left;
+        margin-right: 15px !important;
+        margin-bottom: 0;
+      }
+      .pushes {
+        display: block;
+        font-size: $push-small;
+        .bold {
+          margin-right: 0;
+          color: #333;
+        }
       }
     }
+    .dropdown-header {
+      text-transform: uppercase;
+      font-weight: 700;
+      color: $grey;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
   }
+
 }
 .plus {
   background: #122336;
@@ -217,6 +293,7 @@ body {
   background: white;
   border-radius: $standard;
   overflow: hidden;
+  position: relative;
   td, th {
     padding: 13px 15px;
     .custom-label {
@@ -684,5 +761,48 @@ h4 {
     right: 15px;
     top: 15px;
     font-size: 11px;
+  }
+}
+
+/* The in-table filters */
+.in-table-filters {
+  position: absolute;
+  z-index: 9000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.85);
+  display: none;
+  padding: 8px 30px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  form {
+    position: relative;
+    z-index: 988000;
+  }
+  .inline-filters {
+    color: white;
+    padding-top: 20px;
+    padding-left: 15px;
+    position: relative;
+    z-index: 980000;
+    .outline-button {
+      margin-left: 15px;
+      padding: 8px 20px;
+      &.selected {
+        background: $push-blue;
+        border-color: $push-blue;
+      }
+    }
+  }
+  h4 {
+    color: white;
+    padding-left: 15px;
+  }
+  .kill-modal {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    cursor: pointer;
   }
 }

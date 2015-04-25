@@ -18,6 +18,17 @@ $(document).ready(function(){
     $('.modal').on('show.bs.modal', centerModals);
     $(window).on('resize', centerModals);
 
+    $('.date-trigger').daterangepicker(null, function(start, end, label) {
+        opens: 'left'
+        parentEl: 'div.in-table-filters'
+    });
+    $('.date-trigger').click(function() {
+        $(".in-table-filters").toggle();
+    });
+    $('.kill-modal').click(function() {
+        $(".in-table-filters").hide();
+    })
+
 });
 
 function setupLabel() {

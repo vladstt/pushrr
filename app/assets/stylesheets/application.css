@@ -14,8 +14,9 @@
 
  *= require_self
  *= require constants
-  *= require bootstrap_and_overrides
+ *= require bootstrap_and_overrides
  *= require fonts
  *= require general
+ *= require daterange
  *= require_tree .
  */
