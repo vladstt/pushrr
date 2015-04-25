@@ -3,17 +3,30 @@
 body {
   font-family: 'Lato', sans-serif !important;
   font-size: $push-text;
-  margin: 0;
+  margin: 58px 0 0;
   padding: 0;
   background: #F5F7F9;
  }
 
+
+
 .pushrr-header {
-  background: $push-blue;
+  background-color: $push-blue;
+  background-image: image-url('header-oval.png');
+  background-position: 50px bottom;
+  background-repeat: no-repeat;
   box-shadow: $push-shadow;
   color: white;
   line-height: 1;
-  padding: 13px 15px 11px;
+  padding: 11px 15px 13px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  z-index: 9800;
+  height: 58px;
   a {
     color: white;
     .support {
@@ -28,7 +41,36 @@ body {
     padding: 10px 10px 5px;
   }
   .orange-btn {
-    margin-left: 185px;
+    position: absolute;
+    left: 200px;
+    top: 11px;
+  }
+}
+
+/* The menu toggle */
+.pushrr-rwd {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 11px 9px 0 0;
+  a {
+    text-decoration: none;
+    line-height: 1;
+    &:hover {
+      opacity: .8;
+      text-decoration: none;
+    }
+  }
+  .icon-hamburger {
+    font-size: 17px;
+  }
+  .icon-dashboard {
+    font-size: 27px;
+  }
+  .fa {
+    position: relative;
+    top: -3px;
   }
 }
 
@@ -420,18 +462,8 @@ h4 {
 
 /* New notification button */
 .orange-btn {
-  box-shadow: $push-shadow;
-  border-radius: $standard;
+  @extend .default-button;
   background: $push-orange;
-  line-height: 1;
-  padding: 9px 15px;
-  color: white;
-  display: inline-block;
-  vertical-align: middle;
-  &.bigger {
-    padding: 16px 55px;
-    font-weight: 700;
-  }
   &:hover {
     text-decoration: none;
     color: white;
@@ -442,7 +474,10 @@ h4 {
     margin-right: 3px;
   }
 }
-
+.bigger {
+  padding: 16px 55px !important;
+  font-weight: 700 !important;
+}
 /* Styling the ugly bootstrap form-control & form groups */
 .custom-large-form-control {
   position: relative;
@@ -452,6 +487,9 @@ h4 {
   padding-top: 10px;
   padding-right: 50px;
 
+  &.no-padd {
+    padding-right: 0;
+  }
   .input-group-addon {
     background: #4A4A4A;
     font-size: 14px;
@@ -465,7 +503,7 @@ h4 {
     height: auto;
     border-radius: 3px;
     border: 0;
-    left: 18px;
+    left: 17px;
   }
   .form-control {
     box-shadow: none;
@@ -473,6 +511,8 @@ h4 {
     padding-top: 13px;
     padding-bottom: 13px;
     height: auto;
+    font-size: $push-subtext;
+    font-family: Monaco, Courier;
   }
 }
 
@@ -492,7 +532,7 @@ h4 {
   overflow: hidden;
 }
 
-.content-copy {
+.side-input {
   background: #9B9B9B;
   color: white;
   position: absolute;
@@ -509,6 +549,12 @@ h4 {
     color: white;
   }
   .icon-copy {
+    display: block;
+    font-size: 18px;
+    margin-right: 6px;
+    line-height: 1;
+  }
+  .fa {
     display: block;
     font-size: 18px;
     margin-right: 6px;
@@ -531,4 +577,40 @@ h4 {
     margin-right: 10px;
     vertical-align: middle;
   }
+}
+
+/* Fixing the modal appereance */
+.modal-backdrop {
+  z-index: 9801;
+  opacity: .7 !important;
+  filter: alpha(opacity=70);
+}
+.modal-open .modal {
+  z-index: 9802; /* +2 than header z-index */
+
+  .modal-header,
+  .modal-footer,
+  .modal-body {
+    border: 0;
+    padding: 15px 45px;
+  }
+
+  .modal-footer {
+    text-align: left;
+    padding-bottom: 35px;
+    padding-top: 5px;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
+.modal-header .close {
+  margin-top: -2px;
+  position: absolute;
+  right: -20px;
+  top: -15px;
+  color: white;
+  opacity: 1;
+  font-size: 15px;
 }

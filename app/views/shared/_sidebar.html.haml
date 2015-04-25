@@ -21,7 +21,7 @@
         More websites
   %div.sidebar-menu
     %ul
-      %li
+      %li.on-page
         %a{"title" => "Dashboard", "href" => '/'}
           %span.push-icon.icon-dashboard
           Dashboard
@@ -42,7 +42,7 @@
           %span.push-icon.icon-settings
           Settings
   %div.sidebar-more
-    %a(title='New website' href='#')
+    %a{"title" => "New website", "href" => "#", "data-toggle" => "modal", "data-target" => "#add_website"}
       %span.pull-left.plus
         %span.fa.fa-plus
       Add a new website

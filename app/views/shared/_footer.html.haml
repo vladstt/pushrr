@@ -1,0 +1,108 @@
+/* Add website modal */
+%div#add_website.modal.fade{"role" => "dialog"}
+  %div.modal-dialog
+    %div.modal-content
+      %div.modal-header
+        %h2 Add a new website
+        %button.close{"type" => "button", "data-dismiss" => "modal", "aria-label" => "Close"}
+          %span.icon-close{"aria-hidden" => "true"}
+      /* End header */
+      %div.modal-body
+        %div.input-group.input-group-lg.custom-large-form-control.no-padd
+          %span.input-group-addon
+            Site name
+          %input.form-control{"type" => "text", "class" => "form-control", "placeholder" => "Your site name"}
+
+        %div.input-group.input-group-lg.custom-large-form-control.margin-top-20.no-padd
+          %span.input-group-addon
+            Site URL
+          %input.form-control{"type" => "text", "class" => "form-control", "placeholder" => "yoursite.com"}
+
+      /* End body */
+      %div.modal-footer
+        %a.orange-btn.bigger{"title" => "Link to Pushrr", "href" => "#"}
+          Add website
+
+/* Add custom group */
+%div#add_group.modal.fade{"role" => "dialog"}
+  %div.modal-dialog
+    %div.modal-content
+      %div.modal-header
+        %h2 Add a new custom group
+        %button.close{"type" => "button", "data-dismiss" => "modal", "aria-label" => "Close"}
+          %span.icon-close{"aria-hidden" => "true"}
+      /* End header */
+      %div.modal-body
+        %div.input-group.input-group-lg.custom-large-form-control.no-padd
+          %span.input-group-addon
+            Group name
+          %input.form-control{"type" => "text", "class" => "form-control", "placeholder" => "Your custom group name"}
+
+        %h4
+          Copy and paste the code below into the web page where you would like your subscribers to be grouped, just before the closing </head> tag.
+
+        %div.input-group.input-group-lg.custom-large-form-control.margin-top-20
+          %textarea.form-control{"class" => "form-control", "rows" => "3"}
+            <script src='//cdn.pushrr.com/pushrrjs/67a5b21d65484a3592d1122601070fa9' async></script>
+          %a.side-input{"href" => "#"}
+            %span.icon-copy
+            COPY
+
+      /* End body */
+      %div.modal-footer
+        %a.orange-btn.bigger{"title" => "Link to Pushrr", "href" => "#"}
+          Add Group
+
+/* Add a new card */
+%div#add_card.modal.fade{"role" => "dialog"}
+  %div.modal-dialog
+    %div.modal-content
+      %div.modal-header
+        %h2 Add a new card
+        %button.close{"type" => "button", "data-dismiss" => "modal", "aria-label" => "Close"}
+          %span.icon-close{"aria-hidden" => "true"}
+      /* End header */
+      %div.modal-body
+        %div.input-group.input-group-lg.custom-large-form-control.no-padd
+          %span.input-group-addon
+            First name
+          %input.form-control{"type" => "text", "class" => "form-control"}
+
+        %div.input-group.input-group-lg.custom-large-form-control.no-padd
+          %span.input-group-addon
+            Last name
+          %input.form-control{"type" => "text", "class" => "form-control"}
+
+        %div.input-group.input-group-lg.custom-large-form-control.no-padd
+          %span.input-group-addon
+            Card number
+          %input.form-control{"type" => "text", "class" => "form-control"}
+
+        %div.row
+          %div.col-md-3
+            %div.input-group.input-group-lg.custom-large-form-control.no-padd
+              %span.input-group-addon
+                CVC
+              %input.form-control{"type" => "text", "class" => "form-control"}
+              %small.light.grey
+                Security Code
+          %div.col-md-7.col-md-offset-2
+            %div.row
+              %div.col-md-6
+                %div.input-group.input-group-lg.custom-large-form-control.no-padd
+                  %span.input-group-addon
+                    MM
+                  %input.form-control{"type" => "text", "class" => "form-control"}
+                  %small.light.grey
+                    Expiration date: Month
+              %div.col-md-6
+                %div.input-group.input-group-lg.custom-large-form-control.no-padd
+                  %span.input-group-addon
+                    YYYY
+                  %input.form-control{"type" => "text", "class" => "form-control"}
+                  %small.light.grey
+                    '/' Year
+      /* End body */
+      %div.modal-footer
+        %a.orange-btn.bigger{"title" => "Link to Pushrr", "href" => "#"}
+          Add Card

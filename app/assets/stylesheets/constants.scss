@@ -33,13 +33,53 @@ $standard: 4px;
   font-weight: 700;
 }
 
-/* This should remove all the ugly bootstrap borders & stuff */
-.custom-input-group {
+/* General classes */
+.pushrr-container {
   box-shadow: $push-shadow;
   -webkit-border-radius: $standard;
   -moz-border-radius: $standard;
   border-radius: $standard;
   background: white;
+  border: 0;
+}
+/* Buttons */
+.default-button {
+  box-shadow: $push-shadow;
+  border-radius: $standard;
+  background: $grey;
+  line-height: 1;
+  padding: 9px 15px;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+  &:hover, &:active {
+    background: #333;
+    color: white;
+    text-decoration: none;
+  }
+}
+.outline-button {
+  border-radius: 50px;
+  border: 1px solid white;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px;
+  line-height: 1;
+  &.square {
+    border-radius: $standard;
+  }
+  .pushrr-header & {
+
+  }
+}
+  /* Exception */
+  .pushrr-header .outline-button {
+    padding: 7px 20px;
+  }
+/* This should remove all the ugly bootstrap borders & stuff */
+.custom-input-group {
+  @extend .pushrr-container;
   border: 0;
   * {
     border: 0 !important;

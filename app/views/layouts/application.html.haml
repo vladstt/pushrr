@@ -7,7 +7,9 @@
     = csrf_meta_tags
   %body
     %div#pushrr-wrapper
-      = render :partial => 'dashboard/header'
-      = render :partial => 'dashboard/sidebar'
+      = render :partial => 'shared/header'
+      = render :partial => 'shared/sidebar'
       %div.push-content
         = yield
+
+      = render :partial => 'shared/footer'

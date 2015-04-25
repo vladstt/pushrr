@@ -1,7 +1,12 @@
 %div.pushrr-header.clearfix
 
-  %div.pushrr-rwd
+  %div.pushrr-rwd.pull-left
+    %a{"href" => "#", "title" => "Hide menu"}
+      %span.fa.fa-caret-left
+      %span.icon-hamburger
   %div.pushrr-logo
+    %a{"href" => "/"}
+      =image_tag("test-logo.png", width: '90', class: "margin-right-5 margin-left-5 pull-left")
   %a.orange-btn{"title" => "New notification", "href" => "/new-notification"}
     %span.icon-plus
     New notification

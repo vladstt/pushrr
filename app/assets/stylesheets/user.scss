@@ -1,6 +1,22 @@
 @import "constants";
 @import "general";
 
+.user-header {
+  background-position: 85px bottom !important;
+  .pushrr-rwd {
+    width: 75px;
+    padding-top: 5px;
+
+    .icon-dashboard {
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+    .fa {
+      top: -1px;
+    }
+  }
+}
+
 /* This is what's going on in the sidebar */
 .user-sidebar {
   background: $push-dark-blue;
@@ -11,7 +27,7 @@
   background-position: 0px -40px;
 }
 .user-content {
-  margin-left: 280px;
+  margin-left: 280px !important;
 }
 
 .user-links {
@@ -19,16 +35,6 @@
     border-bottom: 3px solid $push-blue;
     padding-bottom: 3px;
   }
-}
-
-.outline-button {
-  border-radius: 50px;
-  border: 1px solid white;
-  font-size: 14px;
-  font-weight: 500;
-  color: white;
-  padding: 10px 20px;
-  line-height: 1;
 }
 
 .short-stats {
@@ -67,11 +73,8 @@
     position: relative;
   }
   .card {
-    box-shadow: $push-shadow;
-    -webkit-border-radius: $standard;
-    -moz-border-radius: $standard;
-    border-radius: $standard;
-    background: white;
+    @extend .pushrr-container;
+    border: 3px solid transparent;
     width: 150px;
     height: 150px;
     position: relative;
@@ -170,11 +173,7 @@
 }
 
 .current-plan {
-  box-shadow: $push-shadow;
-  -webkit-border-radius: $standard;
-  -moz-border-radius: $standard;
-  border-radius: $standard;
-  background: white;
+  @extend .pushrr-container;
   padding: 25px;
   overflow: hidden;
   .headline {
@@ -185,11 +184,8 @@
     font-weight: 700;
   }
   .progress-bar {
-    box-shadow: $push-shadow;
-    -webkit-border-radius: $standard;
-    -moz-border-radius: $standard;
-    border-radius: $standard;
-    background: #F1F1F1;
+    @extend .pushrr-container;
+    background: #F1F1F1 !important;
     height: 25px;
     display: block;
     width: 100%;

@@ -4,7 +4,7 @@
 %div.row.margin-top-50
   %div.col-md-12
     %div.cards-set.margin-top-30
-      %div.card
+      %div.card.test-click
         %div.logo
           =image_tag("services/js@2x.png", width: '80')
         %span.website-label
@@ -33,3 +33,47 @@
           =image_tag("services/tumblr@2x.png", height: '80')
         %span.website-label
           Tumblr
+
+/* This panel shows up when we click a card above */
+%div.selected-install{"style" => "display: none"}
+  %div.row
+    %div.col-md-7
+      %h4 With pushrr.js on your site, users can opt-in to receive notifications.
+      %h4.margin-top-30 Copy the code shown below to your clipboard.
+
+      %div.input-group.input-group-lg.custom-large-form-control
+        %input.form-control{"type" => "text", "class" => "form-control", "value" => "<script src='//cdn.pushrr.com/pushrrjs/67a5b21d65484a3592d1122601070fa9' async></script>"}
+        %a.side-input{"href" => "#"}
+          %span.icon-copy
+          COPY
+
+      %h4.margin-top-30 Using your website's dashboard paste this code just above the </head> tag.
+
+      %div.how-to-placeholder
+
+      /* Continue */
+      %a.orange-btn.margin-top-30.bigger.test-error{"title" => "Check Installation", "href" => "#"}
+        Check Installation
+
+/* This shows up when the installation sent an error */
+%div.install-error{"style" => "display: none"}
+  =image_tag("error@2x.png", width: '65', class: "error-icon")
+  %div.row
+    %div.col-md-7
+      %h2 We can’t find Pushrr on your website
+      %h3 It looks like there's a problem with your installation. Here what might have happened
+
+      %div.row
+        %div.col-md-4.margin-top-30
+          %h4 Make sure the domain is correct
+          %div.input-group.input-group-lg.custom-large-form-control
+            %input.form-control{"type" => "text", "class" => "form-control", "value" => "mobelio.com"}
+            %a.side-input.refresh{"href" => "#"}
+              %span.fa.fa-refresh
+              Retry
+
+      %h4.margin-top-30 If you've included it in an external script or some other complex integration.
+
+      /* Skip this step */
+      %a.default-button.margin-top-10.bigger{"title" => "Check Installation", "href" => "/"}
+        Ignore this error and continue
