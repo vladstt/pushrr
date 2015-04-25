@@ -1,19 +1,18 @@
 Pages links:
 
-
-  <b>Wizard</b>
-
-  /step-1
-  /step-2
-
-  <b>Dashboard</b>
+  Wizard Pages
   
-  Dashboard: /
-  Notifications: /notifications
-  Subscribers: /subscribers
-  Subscriber groups: /subscribers-groups
-  Add a new notification: /new-notification
-  Website settings: /website-settings
+    /step-1
+    /step-2
+
+  Dashboard pages
   
-  <b>User account</b>
-  User account: /user-account
+    Dashboard: /
+    Notifications: /notifications
+    Subscribers: /subscribers
+    Subscriber groups: /subscribers-groups
+    Add a new notification: /new-notification
+    Website settings: /website-settings
+  
+  User account page
+    User account: /user-account
