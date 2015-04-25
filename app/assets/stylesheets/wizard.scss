@@ -12,7 +12,49 @@ body.wizard {
 h2 {
   font-size: 48px;
 }
+.wizard-header {
+  background-image: none;
+  
+  .steps {
+    padding: 8px 35px;
+    .step {
+      display: inline-block;
+      vertical-align: middle;
+      padding-right: 30px;
+      opacity: .5;
+      position: relative;
 
+      &.active-step {
+        opacity: 1;
+      }
+      &.done-step:after {
+        font-family: FontAwesome;
+        content: "\f058";
+        position: absolute;
+        font-size: 18px;
+        left: 15px;
+        top: -7px;
+        color: $push-orange;
+      }
+
+      .count {
+        @extend .pushrr-container;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        width: 22px;
+        height: 22px;
+        color: $push-blue;
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+        text-align: center;
+        font-weight: 700;
+        line-height: 22px;
+      }
+    }
+  }
+}
 .selected-install {
   @extend .pushrr-container;
   padding: 30px 30px 30px 150px;
@@ -35,6 +77,8 @@ h2 {
     top: 25px;
   }
 }
+
+
 /* Just a test, this is the how-to-placeholder. Right now it's empty, once we add images we can remove the css below */
 
 .how-to-placeholder {

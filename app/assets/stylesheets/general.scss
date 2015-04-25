@@ -541,7 +541,7 @@ h4 {
   left: 5px;
   text-align: right;
   padding: 10px 9px;
-  height: 51px;
+  height: 49px;
   font-size: 11px;
   &:hover {
     background: $push-blue;
@@ -613,4 +613,76 @@ h4 {
   color: white;
   opacity: 1;
   font-size: 15px;
+}
+
+/* Breadcrumbs */
+.bread {
+  display: block;
+  margin-top: 10px;
+  * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .bullet {
+    background: image-url("bullet@2x.png");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    width: 30px;
+    height: 12px;
+    margin-right: 5px;
+  }
+  .item {
+    padding-right: 15px;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: $grey;
+    font-weight: 300;
+  }
+}
+
+/* The notification style */
+.notification-block {
+  @extend .pushrr-container;
+  width: 370px;
+  padding: 15px;
+  position: relative;
+  height: 100px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+
+  .notification-logo {
+    float: left;
+    background: $push-blue;
+    width: 100px;
+    height: 100px;
+    margin: -15px 20px -15px -15px;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .notification-data {
+    float: none;
+  }
+  .header {
+    font-weight: 700;
+    font-size: $push-subtext;
+    color: #333;
+  }
+  .text {
+    font-size: $push-text;
+    color: #333;
+    padding: 7px 0;
+    font-weight: 300;
+  }
+  .small-note {
+    font-size: $push-small;
+    color: $grey;
+    font-weight: 300;
+  }
+  .icon-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 11px;
+  }
 }

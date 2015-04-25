@@ -69,8 +69,10 @@ $standard: 4px;
   &.square {
     border-radius: $standard;
   }
-  .pushrr-header & {
-
+  &:hover {
+    color: white;
+    background: rgba(255, 255, 255, .1);
+    text-decoration: none;
   }
 }
   /* Exception */
@@ -143,4 +145,18 @@ $standard: 4px;
 }
 .margin-top-50 {
   margin-top: 50px;
+}
+
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+
+.minus-margin-15 {
+  margin-top: -15px;
+}
+.minus-margin-20 {
+  margin-top: -20px;
+}
+.minus-margin-30 {
+  margin-top: -30px;
 }

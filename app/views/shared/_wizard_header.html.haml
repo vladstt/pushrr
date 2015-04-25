@@ -1,8 +1,18 @@
-%div.pushrr-header.clearfix
+%div.pushrr-header.wizard-header.clearfix
 
-  %div.pushrr-logo
+  %div.pushrr-logo.pull-left
     =image_tag("test-logo.png", width: '90', class: "margin-right-5 margin-left-5 pull-left")
 
+  %div.steps.pull-left
+    %div.step.step-1.active-step.done-step
+      /* active step defines the current page we're on, done-step applies a small green check to the step that was just completed */
+      %span.count
+        1
+      Design your notification
+    %div.step.step-1
+      %span.count
+        2
+      Install Pushrr on your website
   %ul#top-nav.pull-right
     %li
       %a.outline-button.square{"href" => "#", "title" => "Sign out"}
