@@ -6,12 +6,4 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %div#pushrr-wrapper.user-wrapper
-      = render :partial => 'shared/user_header'
-
-      = render :partial => 'shared/user_sidebar'
-
-      %div.push-content.user-content
-        = yield
-
-    = render :partial => 'shared/footer'
+    = yield

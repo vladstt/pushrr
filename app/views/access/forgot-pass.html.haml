@@ -1,0 +1,25 @@
+%div#login-wrapper
+
+  %div.vertical-center
+
+    %div.container.login-box.text-center
+      =image_tag("pushrr-logo.png", width: '200')
+      %h1
+        Recover your password
+
+      %div.pale-black.margin-top-50
+        %div.input-el
+          %input.form-control{"type" => "email", "placeholder" => "E-mail address"}
+
+        %button.login-btn{"type" => "submit", "title" => "Login"}
+          Recover password
+
+      %div.register.margin-top-30
+        %a.small.white{"href" => "login", "title" => "Go back to login"}
+          Back to login
+
+        %span.separator
+          &bull;
+
+        %a.small.white{"href" => "create", "title" => "Create a new account"}
+          Create a new account

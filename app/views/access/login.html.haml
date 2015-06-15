@@ -1,0 +1,35 @@
+%div#login-wrapper
+
+  %div.vertical-center
+
+    %div.container.login-box.text-center
+      =image_tag("pushrr-logo.png", width: '200')
+      %h1
+        Welcome to Pushrr
+      %p.subtext
+        Let’s get you in
+
+      %div.pale-black.margin-top-50
+        %div.input-el
+          %span.has-error
+            This username does not exists in our Database
+          %input.form-control{"type" => "text", "placeholder" => "username"}
+        %div.input-el
+          %input.form-control{"type" => "password", "placeholder" => "password"}
+          %div
+            %a.pull-right.small{"href" => "forgot-password"} Password problems?
+
+
+          -#        %div.input-el.text-left
+          -#          %label.custom-label
+          -#            %input{"type" => "checkbox"}
+          -#            Remember me
+
+        %button.login-btn{"type" => "submit", "title" => "Login"}
+          Login
+
+        %div.register
+          %b New to Pushrr?
+
+          %a.login-btn.outline-button{"href" => "create", "title" => "Login"}
+            Create an account

@@ -1,5 +1,6 @@
-%div.pull-left.user-sidebar
-  %div.user-area.text-center.margin-top-30
+%div.user-sidebar.pull-right
+  %a.back-dash.icon-close{"title" => "Back to dashboard", "href" => "/"}
+  %div.text-center.margin-top-30
     %div.user-avatar
       =image_tag("emily.png", width: '140')
       %div.user-name
@@ -11,13 +12,12 @@
       %a(title='Logout' href='#')
         Logout
 
-  %div.margin-top-20.text-center
+  %div.margin-top-50.text-center
     %a.outline-button{"href" => "#"}
       Update your avatar
 
-  %div.short-stats.margin-top-50
+  %div.short-stats.margin-top-30
     %div.stat
-      %span.user-icon.icon-subscribers.pull-left
       %span.data
         %span.light
           Subscribers on
@@ -28,7 +28,6 @@
           48
 
     %div.stat
-      %span.user-icon.icon-notifications.pull-left
       %span.data
         %span.light
           Total pushes sent
@@ -36,7 +35,6 @@
           841
 
     %div.stat
-      %span.user-icon.icon-like.pull-left
       %span.data
         %span.light
           Total opt-in rate

@@ -856,39 +856,43 @@ $fa-var-plus-square-o: "\f196";
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.icon-close:before {
+  content: "b";
+}
+.icon-checked:before {
+  content: "i";
+}
+.icon-unchecked:before {
+  content: "j";
+}
+.icon-hamburger:before {
+  content: "g";
+}
+.icon-like:before {
+  content: "l";
+}
 .icon-dashboard:before {
+  content: "f";
+}
+.icon-settings:before {
+  content: "e";
+}
+.icon-plus:before {
+  content: "m";
+}
+.icon-sub-groups:before {
+  content: "n";
+}
+.icon-subscribers:before {
+  content: "o";
+}
+.icon-copy:before {
   content: "a";
 }
 .icon-notifications:before {
-  content: "b";
-}
-.icon-settings:before {
   content: "c";
 }
-.icon-sub-groups:before {
+.icon-bread-arrow:before {
   content: "d";
-}
-.icon-subscribers:before {
-  content: "e";
-}
-.icon-close:before {
-  content: "g";
-}
-.icon-unchecked:before {
-  content: "f";
-}
-.icon-checked:before {
-  content: "h";
-}
-.icon-plus:before {
-  content: "i";
-}
-.icon-copy:before {
-  content: "j";
-}
-.icon-like:before {
-  content: "k";
-}
-.icon-hamburger:before {
-  content: "l";
 }

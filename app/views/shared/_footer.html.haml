@@ -1,3 +1,56 @@
+%div#footer
+  %div.pull-left.footer-switch
+    %div.btn-group.dropup
+      %button.btn.btn-primary{"type" => "button"}
+        %span.head-label
+          Site
+          %span.fa.fa-angle-right
+        %span.bold
+          Mobelio.com
+      %button.btn.btn-primary.dropdown-toggle{"type" => "button", "data-toggle" => "dropdown", "aria-expanded" => "false"}
+        %span.caret
+
+      %ul.dropdown-menu.website-switch
+        %li.dropdown-header
+          Switch to website
+        %li
+          %a{"title" => "welcome.com", "href" => "#", "class" => "website-name"}
+            %span.website-icon
+            welcome.com
+            %span.pushes.grey.light
+              %span.bold 5
+              pushes so far
+        %li
+          %a{"title" => "welcome.com", "href" => "#", "class" => "website-name"}
+            %span.website-icon
+            example.com
+            %span.pushes.grey.light
+              %span.bold 9
+              pushes so far
+        %li
+          %a{"title" => "welcome.com", "href" => "#", "class" => "website-name"}
+            %span.website-icon
+            click.com
+            %span.pushes.grey.light
+              %span.bold 10
+              pushes so far
+
+        %li.new.clearfix
+          %a.orange-btn.pull-right.margin-right-20{"title" => "New website", "href" => "#", "data-toggle" => "modal", "data-target" => "#add_website"}
+            %span.icon-plus
+            Add a new website
+
+  %div.footer-links
+    %a{"title" => "Title", "href" => "#"} Dashboard
+    &bull;
+    %a{"title" => "Title", "href" => "#"} Notifications
+    &bull;
+    %a{"title" => "Title", "href" => "#"} Subscribers
+    &bull;
+    %a{"title" => "Title", "href" => "#"} Groups
+    &bull;
+    %a{"title" => "Title", "href" => "#"} Site Settings
+
 /* Add website modal */
 %div#add_website.modal.fade{"role" => "dialog"}
   %div.modal-dialog

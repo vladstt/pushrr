@@ -1,17 +1,99 @@
 %div.pushrr-header.clearfix
 
-  %div.pushrr-rwd.pull-left
-    %a{"href" => "#", "title" => "Hide menu"}
-      %span.fa.fa-caret-left
-      %span.icon-hamburger
   %div.pushrr-logo
     %a{"href" => "/"}
-      =image_tag("test-logo.png", width: '90', class: "margin-right-5 margin-left-5 pull-left")
-  %a.orange-btn{"title" => "New notification", "href" => "/new-notification"}
-    %span.icon-plus
-    New notification
+      =image_tag("pushrr-logo.png", width: '120', class: "margin-right-5 margin-left-5 pull-left")
+
+  /* Adding the breadcrumb here, always on top of H1 */
+  %div.bread
+    %span.item
+      %span.bullet.icon-bread-arrow
+      Dashboard
+
+  %div.user-area.text-center
+    %div.user-avatar
+      =image_tag("emily.png", height: '40', width: '40')
+    %div.user-links
+      %div.user-name
+        Emily Wallace
+      %a{"title" => "Your account", "href" => "/user-account"}
+        Your account
+      &bull;
+      %a{"title" => "Logout", "href" => "#"}
+        Logout
   %ul#top-nav.pull-right
     %li
       %a
-        Support
         %span.fa.fa-question-circle.support
+
+%div.pushrr-main-menu.clearfix
+  /* Site switcher */
+  %div.pull-left
+    %div.website-area
+      %div.website
+        %span.website-icon.pull-left
+        %span#website-name.website-name
+          mobelio.com
+      %div.website-actions
+        %a.dropdown-toggle{"title" => "More websites", "href" => "#", "data-toggle" => "dropdown"}
+          %span.switch-indicator
+          More websites
+
+        /* Dropdown */
+        %ul.dropdown-menu.website-switch
+
+          %li.new.clearfix
+            %a.orange-btn.pull-right.margin-right-20{"title" => "New website", "href" => "#", "data-toggle" => "modal", "data-target" => "#add_website"}
+              %span.icon-plus
+              Add a new website
+
+          %li.dropdown-header
+            Switch to website
+          %li
+            %a{"title" => "welcome.com", "href" => "#", "class" => "website-name"}
+              %span.website-icon
+              welcome.com
+              %span.pushes.grey.light
+                %span.bold 5
+                pushes so far
+          %li
+            %a{"title" => "welcome.com", "href" => "#", "class" => "website-name"}
+              %span.website-icon
+              example.com
+              %span.pushes.grey.light
+                %span.bold 9
+                pushes so far
+          %li
+            %a{"title" => "welcome.com", "href" => "#", "class" => "website-name"}
+              %span.website-icon
+              click.com
+              %span.pushes.grey.light
+                %span.bold 10
+                pushes so far
+  /* Menu */
+  %div.top-menu.pull-left
+    %ul
+      %li.on-page
+        %a{"title" => "Dashboard", "href" => '/'}
+          %span.push-icon.icon-dashboard
+          Dashboard
+      %li
+        %a{"title" => "Notifications", "href" => '/notifications'}
+          %span.push-icon.icon-notifications
+          Notification
+      %li
+        %a{"title" => "Subscribers", "href" => '/subscribers'}
+          %span.push-icon.icon-subscribers
+          Subscribers
+      %li
+        %a{"title" => "Subscriber Groups", "href" => '/subscribers-groups'}
+          %span.push-icon.icon-sub-groups
+          Subscriber Groups
+      %li
+        %a{"title" => "Settings", "href" => '/website-settings'}
+          %span.push-icon.icon-settings
+          Settings
+
+  %a.orange-btn.pull-right.margin-right-20{"title" => "New notification", "href" => "/new-notification"}
+    %span.icon-plus
+    New notification

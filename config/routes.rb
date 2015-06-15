@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'access/steps'
+
+  get 'login' => 'access#login'
+  get 'create' => 'access#register'
+  get 'forgot-password' => 'access#forgot-pass'
+
   get 'user/account'
 
   get 'user-account' => 'user#account'
@@ -8,6 +14,7 @@ Rails.application.routes.draw do
 
   get 'step-1' => 'wizard#step-1'
   get 'step-2' => 'wizard#step-2'
+  get 'step-3' => 'wizard#step-3'
 
   get 'dashboard/index'
 

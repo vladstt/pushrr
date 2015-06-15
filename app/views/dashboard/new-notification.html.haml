@@ -1,12 +1,3 @@
-/* Adding the breadcrumb here, always on top of H1 */
-%div.bread
-  %span.item
-    %span.bullet
-    %a{"href" => "/", "title" => "Dashboard"}
-      Dashboard
-  %span.item
-    %span.bullet
-    Add a new notification
 %h1
   Send a new notification
 
@@ -132,18 +123,40 @@
       %div.margin-top-50
         %a.orange-btn.bigger{"title" => "New notification", "href" => "/new-notification"}
           Send notification
-  %div.col-md-4.col-md-offset-2
-    %h4.margin-top-30
+  %div.col-md-7
+    %h4.margin-top-30.pull-right.margin-right-10
       This is how your notification will look like
 
-      /* Notification item */
-      %div.notification-block.margin-top-30
+    /* Notification item */
+    %div.notification-block.margin-top-10.pull-right.margin-bottom-50.margin-right-10
+      %div.notification-logo
+        %div.vert
+          =image_tag("pushrr-logo.png", width: '70', alt: 'Pushrr')
+      %div.notification-data
+        %span.icon-close
+        %div.header
+          Pushrr
+        %div.text
+          Notification text will go here.
+        %div.small-note
+          pushrr.com
+
+    %div.preview-frame
+
+      /* Notification item
+      / Same as above but smaller, both need to change content on type
+      /*/
+      %div.notification-block.margin-top-10.pull-right.margin-bottom-50.margin-right-10.tiny-notification
         %div.notification-logo
+          %div.vert
+            =image_tag("pushrr-logo.png", width: '38', alt: 'Pushrr')
         %div.notification-data
           %span.icon-close
           %div.header
-            Mobelio
+            Pushrr
           %div.text
             Notification text will go here.
           %div.small-note
-            mobelion.com
+            pushrr.com
+
+      =image_tag("macbook-frame.png", width: '745', class: "margin-right-5 margin-left-5")

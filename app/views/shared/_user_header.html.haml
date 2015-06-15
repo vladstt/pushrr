@@ -1,12 +1,17 @@
 %div.pushrr-header.user-header.clearfix
 
-  %div.pushrr-rwd.pull-left
-    %a{"href" => "/", "title" => "Back to dashboard"}
-      %span.fa.fa-caret-left
-      %span.icon-dashboard
   %div.pushrr-logo
     %a{"href" => "/"}
-      =image_tag("test-logo.png", width: '90', class: "margin-right-5 margin-left-5 pull-left")
+      =image_tag("pushrr-logo.png", width: '120', class: "margin-right-5 margin-left-5 pull-left")
+
+  /* Adding the breadcrumb here, always on top of H1 */
+  %div.bread
+    %span.item
+      %span.bullet.icon-bread-arrow
+      %a{"href" => "/", "title" => "Back to Dashboard"} Dashboard
+    %span.item
+      %span.bullet.icon-bread-arrow
+      Emily's Account
 
 
   %ul#top-nav.pull-right

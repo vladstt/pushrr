@@ -1,14 +1,4 @@
-/* Adding the breadcrumb here, always on top of H1 */
-%div.bread
-  %span.item
-    %span.bullet
-    %a{"href" => "/", "title" => "Dashboard"}
-      Dashboard
-  %span.item
-    %span.bullet
-    Subscriber groups
-
-%a.orange-btn.pull-right.margin-top-30{"title" => "Add a custom group", "href" => "#", "data-toggle" => "modal", "data-target" => "#add_group"}
+%a.black-blue-btn.pull-right.margin-top-10{"title" => "Add a custom group", "href" => "#", "data-toggle" => "modal", "data-target" => "#add_group"}
   Add a custom group
 %h1
   Subscriber Groups
@@ -154,6 +144,11 @@
               2.110
             %td.text-right{"data-title" => ""}
               %a.fa.fa-times-circle.wider-click-area{"title" => "Delete group", "href" => "#"}
+
+    %a.delete-button{"href" => "#", "title" => "Delete [x] item(s)"}
+      %span.icon-close
+      Delete 1 Item
+
 
     %ul.pagination.custom-input-group
       %li
